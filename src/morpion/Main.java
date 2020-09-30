@@ -8,11 +8,17 @@ public class Main {
         char[][] grille = new char[n][n];
         GraphicEngine.display(grille);
 
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Votre prenom: ");
-        String name = myObj.nextLine();
-        Gamer new_name = new Gamer(name);
+        Scanner firstpl = new Scanner(System.in);
+        System.out.println("1er Joueur: ");
+        String joueur_1 = firstpl.nextLine();
+        Gamer player1 = new Gamer(joueur_1);
+        System.out.println("Bienvenue, " + player1.ReturnName());
 
-        System.out.println("Bienvenue, " + new_name.ReturnName());
+        Scanner secondpl = new Scanner(System.in);
+        System.out.println("2ème Joueur: ");
+        String joueur_2 = secondpl.nextLine();
+        Gamer player2 = new Gamer(joueur_2);
+        System.out.println("Bienvenue, " + player2.ReturnName());
+
     }
 }
